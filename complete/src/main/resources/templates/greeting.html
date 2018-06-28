@@ -6,5 +6,13 @@
 </head>
 <body>
     <p th:text="'Hello, ' + ${name} + '!'" />
+    <div>
+    	<form action="/form" method="GET">
+    		<input type="text" placeholder="enter text" name="inputText"/> 
+    	</form>
+    </div>
+    <p>
+    	<b th:if="${inputText != null}" th:text="${inputText}"></b>
+    </p>
 </body>
 </html>

@@ -14,4 +14,9 @@ public class GreetingController {
         return "greeting";
     }
 
+    @GetMapping("/form")
+    public String getInputText(@RequestParam(name="inputText", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("inputText", name);
+        return "greeting";
+    }
 }
