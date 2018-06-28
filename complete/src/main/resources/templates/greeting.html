@@ -8,11 +8,10 @@
     <p th:text="'Hello, ' + ${name} + '!'" />
     <div>
     	<form action="/form" method="GET">
-    		<input type="text" placeholder="enter text" name="inputText"/> 
+    		<p><input type="text" placeholder="enter text" name="inputText"/></p>
+    		<p><input type="submit" value="Send" /> <input type="reset" value="Reset" /></p> 
     	</form>
     </div>
-    <p>
-    	<b th:if="${inputText != null}" th:text="${inputText}"></b>
-    </p>
+    <p><b th:if="${inputText != null}" th:text="${inputText}"></b></p>
 </body>
 </html>
